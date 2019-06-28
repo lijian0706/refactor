@@ -1,3 +1,4 @@
+## chapter1
 ### step1
 - 将switch单独抽取成一个方法amountFor()
 - 将amountFor()移到Rental中
