@@ -1,0 +1,20 @@
+### step1
+- 将switch单独抽取成一个方法amountFor()
+- 将amountFor()移到Rental中
+- 修改amountFor()为getCharge()，以及其他变量名称，使其可读性更强
+### step2
+- 将常客积分的计算单独抽出一个方法放入Rental
+- 抽出总价方法，getTotalCharge()，由于result在循环内被赋值，因此需要把整个循环一起抽出来
+- 以相同的方式抽出总积分方法，getTotalFrequentRenterPoints()
+- 去除无用的临时变量totalAmount、frequentRenterPoints
+### step3
+- 将Rental.getCharge()搬迁至Movie中
+- 将Rental.getFrequentRenterPoints()搬迁至Movie中
+- 新增Price抽象类，包含一个抽象方法getPriceCode()
+- 新增Price的三个子类
+### step4
+- Movie不再持有_priceCode属性，而是Price对象
+- 修改setPriceCode()方法实现
+- Price新增抽象方法getCharge()，将Movie中getCharge()的各个条件逻辑分别散落至不同的Price子类中，并移除Movie中的getCharge()
+- 以类似的方法处理Movie中的getFrequentRenterPoints()，首先为Price提供默认的getFrequentRenterPoints()实现，NewReleasePrice中对其进行覆盖
+

@@ -1,0 +1,16 @@
+/.externalToolBuilders
+/.settings
+.svn
+/.project
+/target
+/.classpath
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+/bin/
+/logs/
+out/
